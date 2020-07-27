@@ -1,0 +1,27 @@
+:root {
+    --primary-color: #00cc96;
+    --block-color: #f6f7fb;
+    --black: #333;
+    --white: #fff;
+    --primary-font: "Montserrat";
+}
+html {
+    font-size: 62.5%;
+}
+body {
+    font-family: var(--primary-font), "Roboto", sans-serif;
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+.wrapper {
+    max-width: 136.6rem;
+    margin-left: auto;
+    margin-right: auto;
+
+    background-color: var(--white);
+}
+.container {
+    max-width: 1140rem;
+    margin-left: auto;
+    margin-right: auto;
+}
