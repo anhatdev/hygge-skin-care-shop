@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin || Hygge</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png" />
+    <!-- Font - Google Fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet" />
+    <!-- Icon - Ionicons -->
+    <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+    <!-- Icon - Icofont -->
+    <link rel="stylesheet" href="https://allyoucan.cloud/cdn/icofont/1.0.1/icofont.css" />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="/styles/reset.css" />
+    <link rel="stylesheet" href="/styles/admin.css" />
+</head>
+
+<body>
+    <div class="wrapper">
+        <aside class="sidebar">
+            <div class="account">
+                Hygge
+            </div>
+            <nav class="menu">
+                <ul class="menu__list">
+                    <li class="menu__item"><a href="">Dashboard</a></li>
+                    <li class="menu__item"><a href="">Product</a></li>
+                    <li class="menu__item"><a href="">Category</a></li>
+                </ul>
+            </nav>
+            <div class="sidebar__bottom">
+                Hygge
+            </div>
+        </aside>
+        <main class="main">
+            <div class="top">
+                <div class="top__left">
+                    <h2 class="top__title">All Products</h2>
+                    <p class="top__subTitle">24 products</p>
+                </div>
+                <div class="top__right">
+                    <button class="btn">0</button>
+                    <button class="btn btn--primary">+ Add new product</button>
+                </div>
+            </div>
+            <table class="table">
+                <thead class="table__head">
+                    <tr class="table__row">
+                        <th class="table__column">O</th>
+                        <th>Image</th>
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th>Category</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="table__row">
+                        <td>O</td>
+                        <td>Doe</td>
+                        <td>Sun Skincare</td>
+                        <td>20.000đ</td>
+                        <td>Treatments</td>
+                        <td><a href="">Edit</a>
+                            <a href="">Delete</a></td>
+                    </tr>
+                </tbody>
+                <tfoot class="table__foot">
+                    <tr class="">
+                        <th class="table__column">O</th>
+                        <th>Image</th>
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th>Category</th>
+                        <th>Actions</th>
+                    </tr>
+                </tfoot>
+            </table>
+        </main>
+    </div>
+</body>
+
+</html>

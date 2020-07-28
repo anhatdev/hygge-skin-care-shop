@@ -1,0 +1,123 @@
+$primaryColor: #00cc96;
+$bgColor: #172a51;
+$lightBlue: #f6f7fb;
+$black: #333;
+$textGray: #a4a8bd;
+$lightGray: rgba(3, 3, 3, 0.1);
+$darkGray: rgba(3, 3, 3, 0.5);
+$white: #fff;
+$primary-font: "Montserrat";
+@mixin dFlex($direction: row, $justify: space-between, $align: center) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+@mixin fontStyle($fontSize: 14, $fontWeight: 500) {
+    font-size: $fontSize + px;
+    font-weight: $fontWeight;
+}
+button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+html {
+    font-size: 62.5%;
+}
+body,
+button {
+    font-family: $primary-font, "Roboto", sans-serif;
+    @include fontStyle();
+}
+.wrapper {
+    position: relative;
+    max-width: 136.6rem;
+    min-height: 100vh;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2rem 4rem;
+
+    background-color: $bgColor;
+}
+.container {
+    max-width: 114rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    height: 5rem;
+    border-radius: 15px;
+}
+.btn--white {
+    background-color: $white;
+    box-shadow: 0 5px 10px $lightGray;
+}
+.btn--primary {
+    background-color: $primaryColor;
+    color: $white;
+    box-shadow: 0 10px 25px rgba(0, 204, 150, 0.2);
+}
+.sidebar {
+    @include dFlex(column, space-between, flex-start);
+    position: fixed;
+    left: 4rem;
+    top: 2rem;
+    width: 15rem;
+    height: calc(100vh - 4rem);
+    color: $textGray;
+    .menu {
+        margin-top: 5rem;
+    }
+}
+.main {
+    margin-left: calc(15rem + 4rem);
+    padding: 4rem;
+    border-radius: 30px;
+    background-color: $lightBlue;
+    min-height: calc(100vh - 4rem);
+    box-sizing: border-box;
+    .top {
+        @include dFlex();
+        &__title {
+            @include fontStyle(20, 600);
+            margin-bottom: 1rem;
+        }
+        &__subTitle {
+            color: $darkGray;
+        }
+    }
+}
+.table {
+    width: 100%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    &__head {
+        border-bottom: 1.5px solid $lightGray;
+    }
+    &__foot {
+        border-top: 1.5px solid $lightGray;
+    }
+    th {
+        &:first-child {
+            border-radius: 15px 0 0 0;
+        }
+        &:last-child {
+            border-radius: 0 15px 0 0;
+        }
+    }
+    th,
+    td {
+        text-align: center;
+        padding: 2rem;
+        background-color: $white;
+    }
+}

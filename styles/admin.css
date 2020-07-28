@@ -1,0 +1,121 @@
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body,
+button {
+  font-family: "Montserrat", "Roboto", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.wrapper {
+  position: relative;
+  max-width: 136.6rem;
+  min-height: 100vh;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2rem 4rem;
+  background-color: #172a51;
+}
+
+.container {
+  max-width: 114rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  height: 5rem;
+  border-radius: 15px;
+}
+
+.btn--white {
+  background-color: #fff;
+  box-shadow: 0 5px 10px rgba(3, 3, 3, 0.1);
+}
+
+.btn--primary {
+  background-color: #00cc96;
+  color: #fff;
+  box-shadow: 0 10px 25px rgba(0, 204, 150, 0.2);
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: fixed;
+  left: 4rem;
+  top: 2rem;
+  width: 15rem;
+  height: calc(100vh - 4rem);
+  color: #a4a8bd;
+}
+.sidebar .menu {
+  margin-top: 5rem;
+}
+
+.main {
+  margin-left: calc(15rem + 4rem);
+  padding: 4rem;
+  border-radius: 30px;
+  background-color: #f6f7fb;
+  min-height: calc(100vh - 4rem);
+  box-sizing: border-box;
+}
+.main .top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.main .top__title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+.main .top__subTitle {
+  color: rgba(3, 3, 3, 0.5);
+}
+
+.table {
+  width: 100%;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.table__head {
+  border-bottom: 1.5px solid rgba(3, 3, 3, 0.1);
+}
+.table__foot {
+  border-top: 1.5px solid rgba(3, 3, 3, 0.1);
+}
+.table th:first-child {
+  border-radius: 15px 0 0 0;
+}
+.table th:last-child {
+  border-radius: 0 15px 0 0;
+}
+.table th,
+.table td {
+  text-align: center;
+  padding: 2rem;
+  background-color: #fff;
+}
+
+/*# sourceMappingURL=admin.css.map */

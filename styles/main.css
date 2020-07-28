@@ -18,7 +18,7 @@ body,
 button {
   font-family: "Montserrat", "Roboto", sans-serif;
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 .wrapper {
@@ -34,14 +34,19 @@ button {
   margin-right: auto;
 }
 
-button.selectClick {
+button.selectBtn-js {
   border-radius: 30px 30px 0 0;
   border-bottom: none;
 }
 
-ul.selectShow {
-  display: block;
-  border-top: none;
+ul.selectList-js {
+  visibility: visible;
+  opacity: 1;
+}
+
+i.selectLabel-js {
+  display: inline-block;
+  transform: rotate(180deg);
 }
 
 .float-right {
@@ -63,31 +68,43 @@ ul.selectShow {
 .select__label {
   margin-left: 1rem;
   font-size: 18px;
+  transition: all 0.3s linear;
+  display: inline-block;
 }
 .select__list {
-  display: none;
+  visibility: hidden;
   position: absolute;
   left: 0;
   right: 0;
   border: 1.5px solid #f6f7fb;
+  border-top: none;
   border-radius: 0 0 30px 30px;
   background-color: #fff;
+  font-weight: 400;
+  opacity: 0;
+  transition: all 0.3s ease-out;
 }
 .select__item {
   padding: 1.5rem 2.5rem;
+}
+.select__item:hover {
+  font-weight: 500;
 }
 
 .tag {
   display: inline-block;
   padding: 1.5rem 2rem;
-  border-radius: 999px;
+  border-radius: 30px;
   background-color: #f6f7fb;
   font-size: 14px;
 }
 .tag__control {
   background-color: unset;
   margin-left: 1rem;
-  font-size: 16px;
+  font-size: 14px;
+}
+.tag__control:hover {
+  color: rgba(3, 3, 3, 0.5);
 }
 
 .header {
@@ -103,10 +120,13 @@ ul.selectShow {
 .header__burger {
   width: 4rem;
   height: 4rem;
-  line-height: 4.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   border-radius: 999px;
   background: #f6f7fb;
-  font-size: 25px;
+  font-size: 20px;
 }
 .header-controls {
   display: flex;
@@ -135,12 +155,15 @@ ul.selectShow {
 .breadcrumbs__item {
   margin-right: 2rem;
 }
-.breadcrumbs__item span {
-  margin-left: 1rem;
-  font-size: 18px;
+.breadcrumbs__item a:hover {
+  color: rgba(3, 3, 3, 0.5);
 }
 .breadcrumbs__item :last-child {
   font-weight: 600;
+}
+.breadcrumbs__divider {
+  margin-left: 1rem;
+  font-size: 18px;
 }
 
 .filter {
@@ -191,16 +214,14 @@ ul.selectShow {
   display: block;
   margin-top: 2rem;
   margin-bottom: 1.5rem;
-  font-weight: 500;
+}
+.products .product__name:hover {
+  color: rgba(3, 3, 3, 0.5);
 }
 .products .product__old-price {
-  color: rgba(3, 3, 3, 0.4);
-  font-weight: 500;
+  color: rgba(3, 3, 3, 0.5);
   font-size: 14px;
   text-decoration: line-through;
-}
-.products .product__price {
-  font-weight: 500;
 }
 .products .product__details {
   display: flex;
@@ -211,7 +232,7 @@ ul.selectShow {
 .products .product__category {
   display: inline-block;
   padding: 1rem 2rem;
-  border-radius: 999px;
+  border-radius: 30px;
   font-size: 14px;
   font-weight: 600;
   text-transform: uppercase;
@@ -231,6 +252,49 @@ ul.selectShow {
 .products .product__category--green {
   background: rgba(0, 204, 150, 0.1);
   color: #00cc96;
+}
+
+.pagination {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+.pagination__list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.pagination__item {
+  width: 4rem;
+  height: 4rem;
+  line-height: 4rem;
+  text-align: center;
+  border: 1.5px solid #f6f7fb;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.pagination__item:not(:last-child) {
+  margin-right: 2rem;
+}
+.pagination__item--disable {
+  background-color: rgba(3, 3, 3, 0.1);
+  color: rgba(3, 3, 3, 0.5);
+  opacity: 0.7;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+.pagination__item--active {
+  border: none;
+  background-color: #00cc96;
+  color: #fff;
+}
+.pagination__item:hover {
+  border-color: #333;
+}
+
+.footer {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 }
 
 /*# sourceMappingURL=main.css.map */
