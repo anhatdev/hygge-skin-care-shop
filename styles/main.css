@@ -2,6 +2,7 @@ button {
   border: none;
   outline: none;
   cursor: pointer;
+  padding: 0;
 }
 
 a {
@@ -33,19 +34,47 @@ button {
   margin-right: auto;
 }
 
+button.selectClick {
+  border-radius: 30px 30px 0 0;
+  border-bottom: none;
+}
+
+ul.selectShow {
+  display: block;
+  border-top: none;
+}
+
 .float-right {
   float: right;
 }
 
 .select {
+  position: relative;
+}
+.select__drop {
   padding: 1.5rem 2.5rem;
   border: 1.5px solid #f6f7fb;
-  border-radius: 999px;
-  background-color: unset;
+  border-radius: 30px;
+  background-color: #fff;
+}
+.select__drop * {
+  pointer-events: none;
 }
 .select__label {
   margin-left: 1rem;
   font-size: 18px;
+}
+.select__list {
+  display: none;
+  position: absolute;
+  left: 0;
+  right: 0;
+  border: 1.5px solid #f6f7fb;
+  border-radius: 0 0 30px 30px;
+  background-color: #fff;
+}
+.select__item {
+  padding: 1.5rem 2.5rem;
 }
 
 .tag {
@@ -55,7 +84,8 @@ button {
   background-color: #f6f7fb;
   font-size: 14px;
 }
-.tag__label {
+.tag__control {
+  background-color: unset;
   margin-left: 1rem;
   font-size: 16px;
 }
@@ -117,8 +147,17 @@ button {
   padding-top: 2rem;
   padding-bottom: 2rem;
 }
-.filter__item {
+.filter__selects {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.filter__selects div {
   margin-right: 2rem;
+}
+.filter__selects div:last-child {
+  margin-left: auto;
 }
 .filter__tags {
   margin-top: 1.5rem;
