@@ -1,86 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Admin || Hygge</title>
-    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/images/favicon-32x32.png"
+    />
     <!-- Font - Google Fonts-->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
     <!-- Icon - Ionicons -->
     <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
     <!-- Icon - Icofont -->
-    <link rel="stylesheet" href="https://allyoucan.cloud/cdn/icofont/1.0.1/icofont.css" />
+    <link
+      rel="stylesheet"
+      href="https://allyoucan.cloud/cdn/icofont/1.0.1/icofont.css"
+    />
 
     <!-- Styles -->
     <link rel="stylesheet" href="/styles/reset.css" />
     <link rel="stylesheet" href="/styles/admin.css" />
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="wrapper">
-        <aside class="sidebar">
-            <div class="account">
-                Hygge
-            </div>
-            <nav class="menu">
-                <ul class="menu__list">
-                    <li class="menu__item"><a href="">Dashboard</a></li>
-                    <li class="menu__item"><a href="">Product</a></li>
-                    <li class="menu__item"><a href="">Category</a></li>
-                </ul>
-            </nav>
-            <div class="sidebar__bottom">
-                Hygge
-            </div>
-        </aside>
-        <main class="main">
-            <div class="top">
-                <div class="top__left">
-                    <h2 class="top__title">All Products</h2>
-                    <p class="top__subTitle">24 products</p>
-                </div>
-                <div class="top__right">
-                    <button class="btn">0</button>
-                    <button class="btn btn--primary">+ Add new product</button>
-                </div>
-            </div>
-            <table class="table">
-                <thead class="table__head">
-                    <tr class="table__row">
-                        <th class="table__column">O</th>
-                        <th>Image</th>
-                        <th>Name</th>
-                        <th>Price</th>
-                        <th>Category</th>
-                        <th>Actions</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr class="table__row">
-                        <td>O</td>
-                        <td>Doe</td>
-                        <td>Sun Skincare</td>
-                        <td>20.000đ</td>
-                        <td>Treatments</td>
-                        <td><a href="">Edit</a>
-                            <a href="">Delete</a></td>
-                    </tr>
-                </tbody>
-                <tfoot class="table__foot">
-                    <tr class="">
-                        <th class="table__column">O</th>
-                        <th>Image</th>
-                        <th>Name</th>
-                        <th>Price</th>
-                        <th>Category</th>
-                        <th>Actions</th>
-                    </tr>
-                </tfoot>
-            </table>
-        </main>
+      <aside class="sidebar">
+        <div class="account">
+          Hygge
+        </div>
+        <nav class="menu">
+          <ul class="menu__list">
+            <li class="menu__item">
+              <a href="">Dashboard</a>
+            </li>
+            <li class="menu__item menu__item--active">
+              <a href="">Product</a>
+            </li>
+            <li class="menu__item"><a href="">Category</a></li>
+          </ul>
+        </nav>
+        <div class="sidebar__bottom">
+          <a href="">Log out</a>
+        </div>
+      </aside>
+      <main class="main">
+        <div class="top">
+          <div class="top__left">
+            <h2 class="top__title">All Products</h2>
+            <p class="top__subTitle">24 products</p>
+          </div>
+          <div class="top__right">
+            <button class="btn btn--iconBg">
+              <ion-icon name="search-outline"></ion-icon>
+            </button>
+            <button class="btn btn--primary top__btnAdd">
+              + Add new product
+            </button>
+          </div>
+        </div>
+        <table class="table">
+          <thead class="table__head">
+            <tr class="table__row">
+              <th class="table__column">
+                <i class="circle-icon"></i>
+              </th>
+              <th>Image</th>
+              <th>Name</th>
+              <th>Price</th>
+              <th>Category</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="table__row">
+              <td><i class="circle-icon"></i></td>
+              <td>Doe</td>
+              <td>Sun Skincare</td>
+              <td>20.000đ</td>
+              <td>Treatments</td>
+              <td>
+                <a href="" class="btn--icon btn--edit"
+                  ><i class="icofont-edit"></i
+                ></a>
+                <a href="" class="btn--icon btn--delete"
+                  ><i class="icofont-ui-delete"></i
+                ></a>
+              </td>
+            </tr>
+            <tr class="table__row">
+              <td><i class="circle-icon"></i></td>
+              <td>Doe</td>
+              <td>Sun Skincare</td>
+              <td>20.000đ</td>
+              <td>Treatments</td>
+              <td>
+                <a href="" class="btn--icon btn--edit"
+                  ><i class="icofont-edit"></i
+                ></a>
+                <a href="" class="btn--icon btn--delete"
+                  ><i class="icofont-ui-delete"></i
+                ></a>
+              </td>
+            </tr>
+            <tr class="table__row">
+              <td><i class="circle-icon"></i></td>
+              <td>Doe</td>
+              <td>Sun Skincare</td>
+              <td>20.000đ</td>
+              <td>Treatments</td>
+              <td>
+                <a href="" class="btn--icon btn--edit"
+                  ><i class="icofont-edit"></i
+                ></a>
+                <a href="" class="btn--icon btn--delete"
+                  ><i class="icofont-ui-delete"></i
+                ></a>
+              </td>
+            </tr>
+          </tbody>
+          <tfoot class="table__foot">
+            <tr class="table__row">
+              <th class="table__column"><i class="circle-icon"></i></th>
+              <th>Image</th>
+              <th>Name</th>
+              <th>Price</th>
+              <th>Category</th>
+              <th>Actions</th>
+            </tr>
+          </tfoot>
+        </table>
+        <div class="bottom">
+          <span class="table-info">1 to 10 from 100 records</span>
+          <div class="pagination">
+            <span class="pagination__info">Page 2 from 10</span>
+            <ul class="pagination__list">
+              <li class="pagination__item">
+                <a href="">
+                  <i class="icofont-rounded-left"></i>
+                </a>
+              </li>
+              <li class="pagination__item pagination__item--disable">
+                <a href="">1</a>
+              </li>
+              <li class="pagination__item pagination__item--active">
+                <a href="">2</a>
+              </li>
+              <li class="pagination__item"><a href="">3</a></li>
+              <li class="pagination__item"><a href="">4</a></li>
+              <li class="pagination__item"><a href="">5</a></li>
+              <li class="pagination__item"><a href="">6</a></li>
+              <li class="pagination__item">
+                <a href=""> <i class="icofont-rounded-right"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </main>
     </div>
-</body>
-
+  </body>
 </html>

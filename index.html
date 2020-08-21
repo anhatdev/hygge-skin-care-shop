@@ -1,208 +1,222 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hygge</title>
-    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/images/favicon-32x32.png"
+    />
     <!-- Font - Google Fonts-->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
     <!-- Icon - Ionicons -->
     <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
     <!-- Icon - Icofont -->
-    <link rel="stylesheet" href="https://allyoucan.cloud/cdn/icofont/1.0.1/icofont.css" />
+    <link
+      rel="stylesheet"
+      href="https://allyoucan.cloud/cdn/icofont/1.0.1/icofont.css"
+    />
 
     <!-- Styles -->
     <link rel="stylesheet" href="/styles/reset.css" />
-    <link rel="stylesheet" href="/styles/admin.css" />
-</head>
+    <link rel="stylesheet" href="/styles/main.css" />
+  </head>
 
-<body>
+  <body>
     <div class="wrapper">
-        <header class="header">
-            <div class="container header__inner">
-                <a href="#" class="header__logo">
-                    <img src="/images/logo.svg" alt="logo" />
-                </a>
-                <button class="header__burger" title="Menu">
-                    <ion-icon name="menu-outline"></ion-icon>
-                </button>
-                <ul class="header-controls">
-                    <li class="header-controls__item">
-                        <button>
-                            <ion-icon name="search-outline"></ion-icon>
-                        </button>
-                    </li>
-                    <li class="header-controls__item">
-                        <button>
-                            <ion-icon name="cart-outline"></ion-icon>
-                        </button>
-                    </li>
-                    <li class="header-controls__item">
-                        <button>
-                            <ion-icon name="person-outline"></ion-icon>
-                        </button>
-                    </li>
-                </ul>
-            </div>
-        </header>
-        <div class="breadcrumbs">
-            <div class="container">
-                <ul class="breadcrumbs__list">
-                    <li class="breadcrumbs__item">
-                        <a href="#">Home</a>
-                        <i class="breadcrumbs__divider icofont-thin-right"></i>
-                    </li>
-                    <li class="breadcrumbs__item">
-                        <a href="#">Navigation</a>
-                        <i class="breadcrumbs__divider icofont-thin-right"></i>
-                    </li>
-                    <li class="breadcrumbs__item">Eye Care</li>
-                </ul>
-            </div>
+      <header class="header">
+        <div class="container header__inner">
+          <a href="#" class="header__logo">
+            <img src="/images/logo.svg" alt="logo" />
+          </a>
+          <button class="header__burger" title="Menu">
+            <ion-icon name="menu-outline"></ion-icon>
+          </button>
+          <ul class="header-controls">
+            <li class="header-controls__item">
+              <button>
+                <ion-icon name="search-outline"></ion-icon>
+              </button>
+            </li>
+            <li class="header-controls__item">
+              <button>
+                <ion-icon name="cart-outline"></ion-icon>
+              </button>
+            </li>
+            <li class="header-controls__item">
+              <button>
+                <ion-icon name="person-outline"></ion-icon>
+              </button>
+            </li>
+          </ul>
         </div>
-        <div class="filter">
-            <div class="container">
-                <div class="filter__selects">
-                    <div class="select">
-                        <button class="select__drop">
-                            <span class="select__title">Category</span>
-                            <i class="select__label icofont-rounded-down"></i>
-                        </button>
-                        <ul class="select__list">
-                            <li class="select__item"><a href="">Treatments</a></li>
-                            <li class="select__item"><a href="">Treatments</a></li>
-                        </ul>
-                    </div>
-                    <div class="select">
-                        <button class="select__drop">
-                            <span class="select__title">Sort by</span>
-                            <i class="select__label icofont-rounded-down"></i>
-                        </button>
-                        <ul class="select__list">
-                            <li class="select__item"><a href="">Price</a></li>
-                            <li class="select__item"><a href="">Name</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="filter__tags">
-                    <span class="tag filter__item">
-                        <span class="tag__title">Skincare</span>
-                        <button class="tag__control">
-                            <i class="icofont-close"></i>
-                        </button>
-                    </span>
-                    <span class="tag filter__item">
-                        <span class="tag__title">50.000đ</span>
-                        <button class="tag__control">
-                            <i class="icofont-close"></i>
-                        </button>
-                    </span>
-                </div>
-            </div>
+      </header>
+      <div class="breadcrumbs">
+        <div class="container">
+          <ul class="breadcrumbs__list">
+            <li class="breadcrumbs__item">
+              <a href="#">Home</a>
+              <i class="breadcrumbs__divider icofont-thin-right"></i>
+            </li>
+            <li class="breadcrumbs__item">
+              <a href="#">Navigation</a>
+              <i class="breadcrumbs__divider icofont-thin-right"></i>
+            </li>
+            <li class="breadcrumbs__item">Eye Care</li>
+          </ul>
         </div>
-        <div class="products">
-            <div class="container products__inner">
-                <div class="product">
-                    <a href="" class="product__image">
-                        <img src="/images/products/thumb4.png" alt="" />
-                    </a>
-                    <a href="" class="product__name">
-                        Sun cream
-                    </a>
-                    <div class="product__details">
-                        <span class="product__price">20.000đ</span>
-                        <span class="product__category product__category--orange">
-                            Sun care
-                        </span>
-                    </div>
-                </div>
-                <div class="product">
-                    <a href="" class="product__image">
-                        <img src="/images/products/thumb4.png" alt="" />
-                    </a>
-                    <a href="" class="product__name">
-                        Sun cream
-                    </a>
-                    <div class="product__details">
-                        <span class="product__price">20.000đ</span>
-                        <span class="product__category product__category--pink">
-                            Sun care
-                        </span>
-                    </div>
-                </div>
-                <div class="product">
-                    <a href="" class="product__image">
-                        <img src="/images/products/thumb4.png" alt="" />
-                    </a>
-                    <a href="" class="product__name">
-                        Sun cream
-                    </a>
-                    <div class="product__details">
-                        <span class="product__price">20.000đ</span>
-                        <span class="product__category product__category--blue">
-                            Sun care
-                        </span>
-                    </div>
-                </div>
-                <div class="product">
-                    <a href="" class="product__image">
-                        <img src="/images/products/thumb4.png" alt="" />
-                    </a>
-                    <a href="" class="product__name">
-                        Sun cream
-                    </a>
-                    <div class="product__details">
-                        <span class="product__price">20.000đ</span>
-                        <span class="product__category product__category--green">
-                            Sun care
-                        </span>
-                    </div>
-                </div>
-                <div class="product">
-                    <a href="" class="product__image">
-                        <img src="/images/products/thumb4.png" alt="" />
-                    </a>
-                    <a href="" class="product__name">
-                        Sun cream
-                    </a>
-                    <span class="product__old-price">20.000đ</span>
-                    <div class="product__details">
-                        <span class="product__price">20.000đ</span>
-                        <span class="product__category product__category--orange">
-                            Sun care
-                        </span>
-                    </div>
-                </div>
+      </div>
+      <div class="filter">
+        <div class="container">
+          <div class="filter__selects">
+            <div class="select">
+              <button class="select__drop">
+                <span class="select__title">Category</span>
+                <i class="select__label icofont-rounded-down"></i>
+              </button>
+              <ul class="select__list">
+                <li class="select__item"><a href="">Treatments</a></li>
+                <li class="select__item"><a href="">Treatments</a></li>
+              </ul>
             </div>
+            <div class="select">
+              <button class="select__drop">
+                <span class="select__title">Sort by</span>
+                <i class="select__label icofont-rounded-down"></i>
+              </button>
+              <ul class="select__list">
+                <li class="select__item"><a href="">Price</a></li>
+                <li class="select__item"><a href="">Name</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="filter__tags">
+            <span class="tag filter__item">
+              <span class="tag__title">Skincare</span>
+              <button class="tag__control">
+                <i class="icofont-close"></i>
+              </button>
+            </span>
+            <span class="tag filter__item">
+              <span class="tag__title">50.000đ</span>
+              <button class="tag__control">
+                <i class="icofont-close"></i>
+              </button>
+            </span>
+          </div>
         </div>
-        <div class="pagination">
-            <div class="container">
-                <ul class="pagination__list">
-                    <li class="pagination__item">
-                        <a href="">
-                            <i class="icofont-rounded-left"></i>
-                        </a>
-                    </li>
-                    <li class="pagination__item pagination__item--disable"><a href="">1</a></li>
-                    <li class="pagination__item pagination__item--active"><a href="">2</a></li>
-                    <li class="pagination__item"><a href="">3</a></li>
-                    <li class="pagination__item"><a href="">4</a></li>
-                    <li class="pagination__item"><a href="">5</a></li>
-                    <li class="pagination__item"><a href="">6</a></li>
-                    <li class="pagination__item"><a href=""> <i class="icofont-rounded-right"></i></a></li>
-                </ul>
+      </div>
+      <div class="products">
+        <div class="container products__inner">
+          <div class="product">
+            <a href="" class="product__image">
+              <img src="/images/products/thumb4.png" alt="" />
+            </a>
+            <a href="" class="product__name">
+              Sun cream
+            </a>
+            <div class="product__details">
+              <span class="product__price">20.000đ</span>
+              <span class="product__category product__category--orange">
+                Sun care
+              </span>
             </div>
+          </div>
+          <div class="product">
+            <a href="" class="product__image">
+              <img src="/images/products/thumb4.png" alt="" />
+            </a>
+            <a href="" class="product__name">
+              Sun cream
+            </a>
+            <div class="product__details">
+              <span class="product__price">20.000đ</span>
+              <span class="product__category product__category--pink">
+                Sun care
+              </span>
+            </div>
+          </div>
+          <div class="product">
+            <a href="" class="product__image">
+              <img src="/images/products/thumb4.png" alt="" />
+            </a>
+            <a href="" class="product__name">
+              Sun cream
+            </a>
+            <div class="product__details">
+              <span class="product__price">20.000đ</span>
+              <span class="product__category product__category--blue">
+                Sun care
+              </span>
+            </div>
+          </div>
+          <div class="product">
+            <a href="" class="product__image">
+              <img src="/images/products/thumb4.png" alt="" />
+            </a>
+            <a href="" class="product__name">
+              Sun cream
+            </a>
+            <div class="product__details">
+              <span class="product__price">20.000đ</span>
+              <span class="product__category product__category--green">
+                Sun care
+              </span>
+            </div>
+          </div>
+          <div class="product">
+            <a href="" class="product__image">
+              <img src="/images/products/thumb4.png" alt="" />
+            </a>
+            <a href="" class="product__name">
+              Sun cream
+            </a>
+            <span class="product__old-price">20.000đ</span>
+            <div class="product__details">
+              <span class="product__price">20.000đ</span>
+              <span class="product__category product__category--orange">
+                Sun care
+              </span>
+            </div>
+          </div>
         </div>
-        <footer class="footer">
-            <div class="container">
-                © 2020 - All rights reserved
-            </div>
-
-        </footer>
+      </div>
+      <div class="pagination">
+        <div class="container">
+          <ul class="pagination__list">
+            <li class="pagination__item">
+              <a href="">
+                <i class="icofont-rounded-left"></i>
+              </a>
+            </li>
+            <li class="pagination__item pagination__item--disable">
+              <a href="">1</a>
+            </li>
+            <li class="pagination__item pagination__item--active">
+              <a href="">2</a>
+            </li>
+            <li class="pagination__item"><a href="">3</a></li>
+            <li class="pagination__item"><a href="">4</a></li>
+            <li class="pagination__item"><a href="">5</a></li>
+            <li class="pagination__item"><a href="">6</a></li>
+            <li class="pagination__item">
+              <a href=""> <i class="icofont-rounded-right"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <footer class="footer">
+        <div class="container">
+          © 2020 - All rights reserved
+        </div>
+      </footer>
     </div>
     <script src="/scripts/main.js"></script>
-</body>
-
+  </body>
 </html>

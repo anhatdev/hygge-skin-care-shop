@@ -2,122 +2,220 @@ $primaryColor: #00cc96;
 $bgColor: #172a51;
 $lightBlue: #f6f7fb;
 $black: #333;
-$textGray: #a4a8bd;
+$textGray: #b5b9c9;
 $lightGray: rgba(3, 3, 3, 0.1);
 $darkGray: rgba(3, 3, 3, 0.5);
 $white: #fff;
 $primary-font: "Montserrat";
 @mixin dFlex($direction: row, $justify: space-between, $align: center) {
-    display: flex;
-    flex-direction: $direction;
-    justify-content: $justify;
-    align-items: $align;
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
 }
 @mixin fontStyle($fontSize: 14, $fontWeight: 500) {
-    font-size: $fontSize + px;
-    font-weight: $fontWeight;
+  font-size: $fontSize + px;
+  font-weight: $fontWeight;
 }
 button {
-    border: none;
-    outline: none;
-    cursor: pointer;
-    padding: 0;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 0;
 }
 a {
-    text-decoration: none;
-    color: inherit;
+  text-decoration: none;
+  color: inherit;
 }
 html {
-    font-size: 62.5%;
+  font-size: 62.5%;
 }
 body,
 button {
-    font-family: $primary-font, "Roboto", sans-serif;
-    @include fontStyle();
+  font-family: $primary-font, "Roboto", sans-serif;
+  @include fontStyle();
 }
 .wrapper {
-    position: relative;
-    max-width: 136.6rem;
-    min-height: 100vh;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 2rem 4rem;
+  position: relative;
+  min-height: 100vh;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2rem 4rem 2rem 0;
 
-    background-color: $bgColor;
+  background-color: $bgColor;
 }
 .container {
-    max-width: 114rem;
-    margin-left: auto;
-    margin-right: auto;
+  max-width: 114rem;
+  margin-left: auto;
+  margin-right: auto;
 }
-
+.circle-icon {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border: 1.5px solid $lightGray;
+  border-radius: 50%;
+  cursor: pointer;
+}
 .btn {
-    padding-left: 2rem;
-    padding-right: 2rem;
-    height: 5rem;
-    border-radius: 15px;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  height: 5rem;
+  border-radius: 15px;
+}
+.btn--icon {
+  font-size: 20px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.btn--iconBg {
+  font-size: 20px;
+}
+.btn--edit {
+  color: #ffc123;
+}
+.btn--delete {
+  color: #ff66a0;
 }
 .btn--white {
-    background-color: $white;
-    box-shadow: 0 5px 10px $lightGray;
+  background-color: $white;
+  box-shadow: 0 5px 10px $lightGray;
 }
 .btn--primary {
-    background-color: $primaryColor;
-    color: $white;
-    box-shadow: 0 10px 25px rgba(0, 204, 150, 0.2);
+  background-color: $primaryColor;
+  color: $white;
+  box-shadow: 0 10px 25px rgba(0, 204, 150, 0.2);
 }
 .sidebar {
-    @include dFlex(column, space-between, flex-start);
-    position: fixed;
-    left: 4rem;
-    top: 2rem;
-    width: 15rem;
-    height: calc(100vh - 4rem);
-    color: $textGray;
-    .menu {
-        margin-top: 5rem;
+  @include dFlex(column, flex-start, flex-start);
+  position: fixed;
+  left: 0;
+  top: 2rem;
+  width: 18rem;
+  height: calc(100vh - 4rem);
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  box-sizing: border-box;
+  color: $textGray;
+  &__bottom {
+    margin-top: auto;
+  }
+  & > div {
+    padding-left: 4rem;
+  }
+}
+.menu {
+  margin-top: 5rem;
+  &__list {
+  }
+  &__item {
+    padding: 2rem 2rem 2rem 4rem;
+    &--active {
+      background-color: rgba(0, 204, 150, 0.7);
+      border-radius: 0 15px 15px 0;
+      color: $white;
+      border-left: 3px solid $primaryColor;
     }
+  }
 }
 .main {
-    margin-left: calc(15rem + 4rem);
-    padding: 4rem;
-    border-radius: 30px;
-    background-color: $lightBlue;
-    min-height: calc(100vh - 4rem);
-    box-sizing: border-box;
-    .top {
-        @include dFlex();
-        &__title {
-            @include fontStyle(20, 600);
-            margin-bottom: 1rem;
-        }
-        &__subTitle {
-            color: $darkGray;
-        }
+  margin-left: calc(18rem + 4rem);
+  padding: 4rem;
+  border-radius: 30px;
+  background-color: $lightBlue;
+  min-height: calc(100vh - 4rem);
+  box-sizing: border-box;
+  .top {
+    @include dFlex();
+    &__title {
+      @include fontStyle(20, 600);
+      margin-bottom: 1rem;
     }
+    &__subTitle {
+      color: $darkGray;
+    }
+    &__btnAdd {
+      margin-left: 2rem;
+    }
+  }
+  .bottom {
+    @include dFlex();
+    .table-info {
+      color: $darkGray;
+    }
+  }
+}
+.pagination {
+  display: flex;
+  align-items: center;
+  &__info {
+    color: $darkGray;
+    margin-right: 2rem;
+  }
+  &__list {
+    @include dFlex(row, center);
+  }
+  &__item {
+    width: 3rem;
+    height: 3rem;
+    line-height: 3rem;
+    text-align: center;
+    border: 1.5px solid $lightBlue;
+    border-radius: 10px;
+    cursor: pointer;
+    &:not(:last-child) {
+      margin-right: 1rem;
+    }
+    &--disable {
+      background-color: $lightGray;
+      color: $darkGray;
+      opacity: 0.7;
+      cursor: not-allowed;
+    }
+    &--active {
+      border: none;
+      background-color: $primaryColor;
+      color: $white;
+    }
+    &:hover {
+      border-color: $black;
+    }
+  }
 }
 .table {
-    width: 100%;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    &__head {
-        border-bottom: 1.5px solid $lightGray;
-    }
-    &__foot {
-        border-top: 1.5px solid $lightGray;
-    }
+  width: 100%;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+
+  &__head {
+    border-bottom: 1.5px solid $lightGray;
     th {
-        &:first-child {
-            border-radius: 15px 0 0 0;
-        }
-        &:last-child {
-            border-radius: 0 15px 0 0;
-        }
+      &:first-child {
+        border-radius: 15px 0 0 0;
+      }
+      &:last-child {
+        border-radius: 0 15px 0 0;
+      }
     }
-    th,
-    td {
-        text-align: center;
-        padding: 2rem;
-        background-color: $white;
+  }
+  &__foot {
+    border-top: 1.5px solid $lightGray;
+    th {
+      &:first-child {
+        border-radius: 0 0 0 15px;
+      }
+      &:last-child {
+        border-radius: 0 0 15px 0;
+      }
     }
+  }
+  th {
+    color: $darkGray;
+  }
+  th,
+  td {
+    text-align: center;
+    padding: 2rem;
+    background-color: $white;
+  }
 }
